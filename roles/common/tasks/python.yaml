@@ -4,7 +4,7 @@
     state: latest
 
 - name: Import App Pre Req
-  ansible.builtin.tasks_from: AppPrereq.yaml
+  ansible.builtin.import_tasks: AppPrereq.yaml
 
 
 - name: installing dependencies
@@ -14,4 +14,4 @@
 
 
 - name: Import systemd
-  ansible.builtin.tasks_from: systemd.yaml
+  ansible.builtin.import_tasks: systemd.yaml

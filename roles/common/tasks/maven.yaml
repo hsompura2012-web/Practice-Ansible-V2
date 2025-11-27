@@ -4,7 +4,7 @@
     state: latest
 
 - name : Import App Prereq
-  ansible.builtin.tasks_from: AppPrereq.yaml
+  ansible.builtin.import_tasks: AppPrereq.yaml
 
 - name: installing mavem dependencies
   ansible.builtin.shell: mvn clean package ; mv target/shipping-1.0.jar shipping.jar
@@ -26,4 +26,4 @@
   ansible.builtin.shell: mysql -h mysql-dev.harshitsompura.online -uroot -pRoboShop@1 < /app/db/master-data.sql
 
 - name: Import systemd
-  ansible.builtin.tasks_from: systemd.yaml
+  ansible.builtin.import_tasks: systemd.yaml
