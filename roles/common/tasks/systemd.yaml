@@ -1,6 +1,6 @@
 - name: Copy Service file file
   ansible.builtin.copy:
-    src: {{ component }}.service
+    src: "{{ component }}.service"
     dest: /etc/systemd/system/{{ component }}.service
 
 - name: Make sure a service unit is running
