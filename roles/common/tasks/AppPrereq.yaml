@@ -14,7 +14,3 @@
     src: https://roboshop-artifacts.s3.amazonaws.com/{{ component }}-v3.zip
     dest: /app
     remote_src: yes
-
-- name: Install npm package
-  community.general.npm:
-    path: /app

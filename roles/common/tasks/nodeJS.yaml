@@ -6,6 +6,10 @@
 - name: Import App PreReq
   ansible.builtin.import_tasks: AppPrereq.yaml
 
+- name: Install npm package
+  community.general.npm:
+    path: /app
+
 - name: Import systemd
   ansible.builtin.import_tasks: systemd.yaml
 
